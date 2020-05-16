@@ -53,7 +53,7 @@ _Only 93 bytes!_
 html{background:#111;color:#eee}a{color:#ec1}body{max-width:46rem;margin:0 auto;padding:1rem}
 ```
 
-I wouldn't recommend using this one because you're missing some things that prevent the page from being wider than the screen, and also some nice styling like line-height and sans-serif headings.
+I wouldn't recommend using this one because you're missing some things that prevent the page from being wider than the screen, and also some nice styling like line-height.
 
 **Even Smaller** Source Code: (unminified)
 ------------------------------------------

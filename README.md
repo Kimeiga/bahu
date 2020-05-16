@@ -1,7 +1,7 @@
 Bahu
 ====
 
-Literally the smallest amount of css that you would need to get a site running with a dark theme and reasonable styling defaults without assuming anything more than that there exists a `<body>`.
+Literally the smallest amount of css that you would need to get a site running with a **dark theme** and reasonable styling defaults without assuming anything more than that there exists a `<body>`.
 
 Source Code (minified):
 -----------------------

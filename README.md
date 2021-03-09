@@ -110,8 +110,6 @@ This has to be changed because it defaults to a dark blue that cannot be read on
 
 The colors that take the least amount of characters to produce in CSS are "red" and "tan", at 3 characters. I liked the look of tan better, so I chose tan for the links color. It shows nicely on the dark background.
 
-[An example.](#)
-
 ### `pre` tag
 
 #### `overflow-x: auto;`

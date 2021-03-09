@@ -125,3 +125,7 @@ The colors that take the least amount of characters to produce in CSS are "red" 
 So this is a more complicated one. I basically needed to make the text, date, button, and other inputs display as block so they wouldn't all be inline as this can make html forms into one long line that is rather hard to read. `select`s and `textarea`s are not included in `input` so I just had to add them. However, we don't want checkboxes and radio buttons to push their tags under them as that looks odd, so we exclude them with the `:not` selector.
 
 > For the record, if you don't like Times New Roman or whatever default serif font that you are rendering this page with, go ahead and add `font-family: sans-serif;` to your body. But I kinda like Times New Roman, and wanted to save bytes, so I'm ok with it.
+
+===
+
+I made this while having one of those nights where you are trying to create something, but you don't understand all of your frontend tools and you just wrangle with build errors all night. In that fit of frustration I decided to try to simplify my life, and was inspired to try to figure out what is the _least_ amount of CSS I need for a dark themed webpage. I didn't want my eyes to burn while working on my web app at night, but I also didn't want to go through the trouble of installing a CSS framework, and using all of their classes etc. Thus bahu was born.

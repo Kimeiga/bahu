@@ -1,4 +1,4 @@
-![](bahu-logo.svg)
+<img src="bahu-logo.svg" width="200" height="200">
 
 # Bahu
 
@@ -123,7 +123,5 @@ The colors that take the least amount of characters to produce in CSS are "red" 
 #### `display: block;`
 
 So this is a more complicated one. I basically needed to make the text, date, button, and other inputs display as block so they wouldn't all be inline as this can make html forms into one long line that is rather hard to read. `select`s and `textarea`s are not included in `input` so I just had to add them. However, we don't want checkboxes and radio buttons to push their tags under them as that looks odd, so we exclude them with the `:not` selector.
-
-And there you have it; on to the demo.
 
 > For the record, if you don't like Times New Roman or whatever default serif font that you are rendering this page with, go ahead and add `font-family: sans-serif;` to your body. But I kinda like Times New Roman, and wanted to save bytes, so I'm ok with it.

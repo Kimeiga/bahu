@@ -1,24 +1,26 @@
-html {
-	background: #111;
-	color: #eee;
-}
-
-a {
-	color: #ec1;
+* {
+  max-width: 100%;
 }
 
 body {
-	max-width: 46rem;
-	margin: 0 auto;
-	padding: 1rem;
-	line-height: 1.5;
+  background: #111;
+  color: #eee;
+  max-width: 46em;
+  margin: auto;
+  padding: 1em;
+  line-height: 2;
 }
 
-* {
-	max-width: 100%;
+a {
+  color: tan;
 }
 
 pre {
-	white-space: pre-wrap;
-	overflow-wrap: anywhere;
+  overflow-x: auto;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  display: block;
 }

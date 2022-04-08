@@ -10,7 +10,7 @@
   <meta property="og:url" content="http://bahu.now.sh" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="bahu-logo.png">
-  <title>Bahu: 315B CSS Default</title>
+  <title>Bahu: 345B CSS Default</title>
 </head>
 
 <body>
@@ -24,9 +24,9 @@
       </p>
     </header>
     <h2>Source Code <small>(minified)</small>:</h2>
-    <em>Only 315 bytes!</em>
+    <em>Only 345 bytes!</em>
     <pre
-      style="color:tan"><code>*{max-width:100%}body{margin:2rem auto;max-width:50rem;line-height:1.6;font-size:1.125rem;background:#111;color:#eee;padding:1rem;font-family:sans-serif}h1,h2,h3{line-height:1.2}a{color:tan}pre{white-space:pre-wrap;overflow-wrap:break-word}input:not([type=checkbox]):not([type=radio]),select,textarea{display:block}</code></pre>
+      style="color:tan"><code>*{max-width:100%}body{margin:2rem auto;max-width:50rem;line-height:1.6;font-size:1.125rem;background:#111;color:#eee;padding:1rem;font-family:sans-serif}h1,h2,h3{line-height:1.2}a{color:tan}pre{white-space:pre-wrap;overflow-wrap:break-word}code{overflow-wrap:break-word}input:not([type=checkbox]):not([type=radio]),select,textarea{display:block}</code></pre>
     <p>No need to import any <code>npm</code> module or pull down any <code>&lt;link&gt;</code>. Just copy and paste
       into a <code>&lt;style&gt;</code> element in your <code>&lt;head&gt;</code>! Now stop worrying about CSS
       frameworks, responsive design, bundle size, time to first paint, etc. and <strong>focus on coding your web
@@ -63,6 +63,10 @@ pre {
   overflow-wrap: break-word;
 }
 
+code {
+  overflow-wrap: break-word;
+}
+
 input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
@@ -93,7 +97,7 @@ textarea {
       liked the look of tan better, so I chose tan for the links color. It shows nicely on the dark background.</p>
     <a href="#" href>An example.</a>
 
-    <h3><code>pre { white-space: pre-wrap; overflow-wrap: break-word; }</code></h3>
+    <h3><code>pre { white-space: pre-wrap; overflow-wrap: break-word; } code { overflow-wrap: break-word; }</code></h3>
     <p><code>pre</code> had to be modified so that you could read pre-formatted text that is wider than the viewport.
       The consensus seems to be to allow it to wrap, so I followed suit. You need both of these declarations for this to
       avoid expanding beyond the window.</p>
@@ -593,7 +597,7 @@ textarea {
             <legend>Textareas</legend>
             <p>
               <label for="textarea">Textarea</label>
-              <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+              <textarea id="textarea" rows="8" cols="40" placeholder="Enter your message here"></textarea>
             </p>
           </fieldset>
           <p><a href="#top">[Top]</a></p>

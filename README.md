@@ -8,9 +8,9 @@ Literally the smallest amount of css that you would need to get a site running w
 Source Code (minified):
 -----------------------
 
-_Only 290 bytes!_
+_Only 345 bytes!_
 
-    *{max-width:100%}body{margin:2rem auto;max-width:50rem;line-height:1.6;font-size:1.125rem;background:#111;color:#eee;padding:1rem;font-family:sans-serif}h1,h2,h3{line-height:1.2}a{color:tan}pre{white-space:pre-wrap}input:not([type=checkbox]):not([type=radio]),select,textarea{display:block}
+    *{max-width:100%}body{margin:2rem auto;max-width:50rem;line-height:1.6;font-size:1.125rem;background:#111;color:#eee;padding:1rem;font-family:sans-serif}h1,h2,h3{line-height:1.2}a{color:tan}pre{white-space:pre-wrap;overflow-wrap:break-word}code{overflow-wrap:break-word}input:not([type=checkbox]):not([type=radio]),select,textarea{display:block}
 
 No need to import any `npm` module or pull down any `<link>`. Just copy and paste into a `<style>` element in your `<head>`! Now stop worrying about CSS frameworks, responsive design, bundle size, time to first paint, etc. and **focus on coding your web app!**
 
@@ -49,6 +49,10 @@ Source Code (unminified):
       overflow-wrap: break-word;
     }
     
+    code {
+      overflow-wrap: break-word;
+    }
+    
     input:not([type="checkbox"]):not([type="radio"]),
     select,
     textarea {
@@ -84,7 +88,7 @@ The colors that take the least amount of characters to produce in CSS are "red" 
 
 [An example.](#)
 
-### `pre { white-space: pre-wrap; overflow-wrap: break-word; }`
+### `pre { white-space: pre-wrap; overflow-wrap: break-word; } code { overflow-wrap: break-word; }`
 
 `pre` had to be modified so that you could read pre-formatted text that is wider than the viewport. The consensus seems to be to allow it to wrap, so I followed suit. You need both of these declarations for this to avoid expanding beyond the window.
 

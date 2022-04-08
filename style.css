@@ -28,6 +28,10 @@ pre {
   overflow-wrap: break-word;
 }
 
+code {
+  overflow-wrap: break-word;
+}
+
 input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {

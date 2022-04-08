@@ -92,6 +92,6 @@ The colors that take the least amount of characters to produce in CSS are "red" 
 
 `pre` had to be modified so that you could read pre-formatted text that is wider than the viewport. The consensus seems to be to allow it to wrap, so I followed suit. You need both of these declarations for this to avoid expanding beyond the window.
 
-### `input:not([type="checkbox"]):not([type="radio"]), select, textarea { display: block; }` tag
+### `input:not([type="checkbox"]):not([type="radio"]), select, textarea { display: block; }`
 
 So this is a more complicated one. I basically needed to make the text, date, button, and other inputs display as block so they wouldn't all be inline as this can make html forms into one long line that is rather hard to read. `select`s and `textarea`s are not included in `input` so I just had to add them. However, we don't want checkboxes and radio buttons to push their tags under them as that looks odd, so we exclude them with the `:not` selector.

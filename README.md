@@ -46,6 +46,7 @@ Source Code (unminified):
     
     pre {
       white-space: pre-wrap;
+      overflow-wrap: break-word;
     }
     
     input:not([type="checkbox"]):not([type="radio"]),
@@ -83,9 +84,9 @@ The colors that take the least amount of characters to produce in CSS are "red" 
 
 [An example.](#)
 
-### `pre { white-space: pre-wrap; }`
+### `pre { white-space: pre-wrap; overflow-wrap: break-word; }`
 
-`pre` had to be modified so that you could read pre-formatted text that is wider than the viewport. The consensus seems to be to allow it to wrap, so I followed suit.
+`pre` had to be modified so that you could read pre-formatted text that is wider than the viewport. The consensus seems to be to allow it to wrap, so I followed suit. You need both of these declarations for this to avoid expanding beyond the window.
 
 ### `input:not([type="checkbox"]):not([type="radio"]), select, textarea { display: block; }` tag
 

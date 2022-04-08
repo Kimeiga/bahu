@@ -25,6 +25,7 @@ a {
 
 pre {
   white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 input:not([type="checkbox"]):not([type="radio"]),

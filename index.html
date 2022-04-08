@@ -10,7 +10,7 @@
   <meta property="og:url" content="http://bahu.now.sh" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="bahu-logo.png">
-  <title>Bahu: 209B CSS Framework</title>
+  <title>Bahu: 290B CSS Default</title>
 </head>
 
 <body>
@@ -24,10 +24,9 @@
       </p>
     </header>
     <h2>Source Code <small>(minified)</small>:</h2>
-    <em>Only 209 bytes!</em>
-    <pre style="color:tan"><code>*{max-width:100%}body{background:#111;color:#eee;max-width:46em;margin:auto;padding:1em;line-
-height:2}a{color:tan}pre{overflow-x:auto}input:not([type=checkbox]):not([type=radio]),select,
-textarea{display:block}</code></pre>
+    <em>Only 290 bytes!</em>
+    <pre
+      style="color:tan"><code>*{max-width:100%}body{margin:2rem auto;max-width:50rem;line-height:1.6;font-size:1.125rem;background:#111;color:#eee;padding:1rem;font-family:sans-serif}h1,h2,h3{line-height:1.2}a{color:tan}pre{white-space:pre-wrap}input:not([type=checkbox]):not([type=radio]),select,textarea{display:block}</code></pre>
     <p>No need to import any <code>npm</code> module or pull down any <code>&lt;link&gt;</code>. Just copy and paste
       into a <code>&lt;style&gt;</code> element in your <code>&lt;head&gt;</code>! Now stop worrying about CSS
       frameworks, responsive design, bundle size, time to first paint, etc. and <strong>focus on coding your web
@@ -39,12 +38,20 @@ textarea{display:block}</code></pre>
 }
 
 body {
+  margin: 2rem auto;
+  max-width: 50rem;
+  line-height: 1.6;
+  font-size: 1.125rem;
   background: #111;
   color: #eee;
-  max-width: 46em;
-  margin: auto;
-  padding: 1em;
-  line-height: 2;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 a {
@@ -52,7 +59,7 @@ a {
 }
 
 pre {
-  overflow-x: auto;
+  white-space: pre-wrap;
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
@@ -60,81 +67,38 @@ select,
 textarea {
   display: block;
 }</code></pre>
-    <h2><strong>Even Smaller</strong> Source Code: <small>(minified)</small></h2>
-    <em>Only 83 bytes!</em>
-    <pre><code>body{background:#111;color:#eee;max-width:46em;margin:auto;padding:1em}a{color:tan}</code></pre>
-    <p>I wouldn't recommend using this one because you're missing some things that prevent the page from being wider
-      than the screen, and also some nice styling like line-height. But if you are certain you don't need anything else,
-      I suppose it is fine.</p>
-    <h2><strong>Even Smaller</strong> Source Code: <small>(unminified)</small></h2>
-    <pre><code>body {
-  background: #111;
-  color: #eee;
-  max-width: 46em;
-  margin: auto;
-  padding: 1em;
-}
+    <hr>
+    <h2>Explanation</h2>
 
-a {
-  color: tan;
-}</code></pre>
-    <h2>Explanation (of full 209B version)</h2>
-    <h3><code>*</code> tag</h3>
-
-    <h4><code>max-width: 100%;</code></h4>
+    <h3><code>* { max-width: 100%; }</code></h3>
     <p>This is to prevent images, figures, forms, and other elements from breaking out of the width of the page.</p>
 
-    <h3><code>body</code> tag</h3>
-    <h4><code>background: #111;</code></h4>
-    <p>This gives the webpage a dark background.</p>
+    <h3><code>body { max-width: 50rem; }</code></h3>
 
-    <h4><code>color: #eee;</code></h4>
-    <p>This makes the text off-white to be legible on the dark backdrop.</p>
+    <p>This gives the page a readable width of 800px.</p>
 
-    <h4><code>max-width: 46em;</code></h4>
+    <h3><code>body { margin: 2rem auto; }</code></h3>
 
-    <p>This gives the page a readable width.</p>
-    <p><code>em</code> unit of measure is used to save 1 character over
-      <code>rem</code> while still increasing in size with increasing viewport font-size. Since <code>body</code> is
-      unlikely to have a font-size placed on it, and even if it did, it would affect everything anyways (as if placed on
-      the <code>html</code> element), this usage of <code>em</code> is practically identical to <code>rem</code>, so it
-      is ok to save this 1 character.
-    </p>
+    <p>This is used to center the body on the page. </p>
 
-    <h4><code>margin: auto;</code></h4>
+    <h3><code>body { font-size: 1.125rem; }</code></h3>
+    <p>To give a font size of 18px for the body.</p>
 
-    <p>This is used to center the body on the page. <code>margin: 0 auto;</code> is equivalent, but uses 2 more
-      characters. Since the body is the maximum height of the page anyways, it is ok to have <code>margin-top</code> and
-      <code>margin-bottom</code> be set to <code>auto</code> when we use <code>margin: auto</code>.
-    </p>
-
-    <h4><code>padding: 1em;</code></h4>
-    <p>Gives a padding of 1em around the body so that on mobile (or when in a sufficiently thin window, there is space
-      between the edges of the screen and the copy. <code>em</code> is used for similar reasons to its usage in
-      <code>body</code>'s <code>max-width</code>.
-    </p>
-
-    <h4><code>line-height: 2;</code></h4>
-    <p>Used to make the text more bearable to read. I considered a fractional unit like "1.5" or "1.7", but to save 2
-      characters I chose "2". It still is quite a bit more legible than when in it's default state of "1".</p>
-
-    <h3><code>a</code> tag</h3>
+    <h3><code>a { color: tan; }</code></h3>
 
     <p>This has to be changed because it defaults to a dark blue that cannot be read on a black background.</p>
-    <h4><code>color: tan;</code></h4>
+
     <p>The colors that take the least amount of characters to produce in CSS are "red" and "tan", at 3 characters. I
       liked the look of tan better, so I chose tan for the links color. It shows nicely on the dark background.</p>
     <a href="#" href>An example.</a>
 
-    <h3><code>pre</code> tag</h3>
-    <h4><code>overflow-x: auto;</code></h4>
+    <h3><code>pre { white-space: pre-wrap; }</code></h3>
     <p><code>pre</code> had to be modified so that you could read pre-formatted text that is wider than the viewport.
-      The consensus seems to be to allow it to overflow with a scroll, so I followed suit.</p>
+      The consensus seems to be to allow it to wrap, so I followed suit.</p>
 
     <h3><code>input:not([type="checkbox"]):not([type="radio"]),
       select,
-      textarea</code> tag</h3>
-    <h4><code>display: block;</code></h4>
+      textarea { display: block; }</code> tag</h3>
     <p>So this is a more complicated one. I basically needed to make the text, date, button, and other inputs display as
       block so they wouldn't all be inline as this can make html forms into one long line that is rather hard to read.
       <code>select</code>s and <code>textarea</code>s are not included in <code>input</code> so I just had to add them.
@@ -143,9 +107,6 @@ a {
     </p>
 
     <p>And there you have it; on to the demo.</p>
-    <blockquote>For the record, if you don't like Times New Roman or whatever default serif font that you are rendering
-      this page with, go ahead and add <code>font-family: sans-serif;</code> to your body. But I kinda like Times New
-      Roman, and wanted to save bytes, so I'm ok with it.</blockquote>
     <h2>Demo</h2>
     <p>The following is an html test page by Chris Bracco so you can see how Bahu looks. Some elements might be a bit
       high contrast, like the form inputs, but some people
